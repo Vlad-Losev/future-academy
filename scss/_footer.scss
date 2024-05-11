@@ -1,0 +1,67 @@
+.footer {
+  max-width: 1920px;
+  background-color: $color-bg;
+  margin: 0 auto;
+
+  &__container {
+    @include flex(space-between);
+    color: #FFF;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    @media(max-width: 510px) {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  .address__list {
+    @include flex(center);
+    gap: 30px;
+
+    @media(max-width: 1024px) {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    @media(max-width: 768px) {
+      font-size: 12px;
+      line-height: 14px;
+    }
+
+    @media(max-width: 510px) {
+      align-self: center;
+      gap: 5px;
+      order: 1;
+    }
+
+    a {
+      transition: color .2s;
+      padding: 10px;
+
+      &:hover {
+        color: $color-2;
+      }
+    }
+  }
+
+  .social__list {
+    @include flex(center);
+    gap: 10px;
+
+    a {
+      padding: 5px;
+
+      &:hover {
+        svg {
+          fill: $color-2;
+        }
+      }
+
+      svg {
+        fill: #FFF;
+        transition: fill .2s;
+      }
+    }
+  }
+}

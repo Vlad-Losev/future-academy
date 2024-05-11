@@ -1,0 +1,284 @@
+.about {
+  margin-bottom: 100px;
+
+  @media(max-width: 1024px) {
+    margin-bottom: 70px;
+  }
+
+  @media(max-width: 510px) {
+    margin-bottom: 40px;
+  }
+
+  .contain__wrapper {
+    max-width: 1920px;
+    background: url(../img/about-bg.svg) no-repeat center center, linear-gradient(98.93deg, #00093c -0.89%, #124960 101.53%);
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+
+    @media(max-width: 1040px) {
+      background-position: left;
+    }
+  }
+
+  .container {
+    max-width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    color: #FFF;
+    padding-top: 80px;
+    padding-bottom: 100px;
+    margin: 0 auto;
+
+    @media(max-width: 1040px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @media(max-width: 768px) {
+      padding-top: 60px;
+      padding-bottom: 70px;
+    }
+
+    @media(max-width: 510px) {
+      padding-top: 40px;
+      padding-bottom: 50px;
+    }
+  }
+
+  &__anime {
+    position: absolute;
+  }
+
+  @keyframes i1 {
+    0% {
+      top: 100px;
+      left: 1%;
+    }
+    50% {
+      top: 200px;
+      left: 1%;
+    }
+    100% {
+      top: 150px;
+      left: 1%;
+    }
+  }
+
+  @media(max-width: 768px) {
+    @keyframes i1 {
+      0% {
+        top: 100px;
+        left: 1%;
+      }
+      50% {
+        top: 200px;
+        left: 1%;
+      }
+      100% {
+        top: 150px;
+        left: 1%;
+      }
+    }
+  }
+
+  .i1 {
+    width: 250px;
+    animation: i1 8s infinite ease-in-out alternate;
+
+    @media(max-width: 768px) {
+      width: 100px;
+    }
+  }
+
+  @keyframes i2 {
+    0% {
+      top: 20px;
+      left: calc(50% - 100px);
+    }
+    50% {
+      top: 100px;
+      left: calc(50% - 100px);
+    }
+    100% {
+      top: 20px;
+      left: calc(50% - 100px);
+    }
+  }
+
+  @media(max-width: 1024px) {
+    @keyframes i2 {
+      0% {
+        top: 20px;
+        right: 100px;
+      }
+      50% {
+        top: 100px;
+        right: 100px;
+      }
+      100% {
+        top: 20px;
+        right: 100px;
+      }
+    }
+  }
+
+  @media(max-width: 768px) {
+    @keyframes i2 {
+      0% {
+        top: 20px;
+        right: 20px;
+      }
+      50% {
+        top: 100px;
+        right: 20px;
+      }
+      100% {
+        top: 20px;
+        right: 20px;
+      }
+    }
+  }
+
+  .i2 {
+    width: 200px;
+    animation: i2 15s infinite ease-in-out alternate;
+
+    @media(max-width: 768px) {
+      width: 100px;
+    }
+  }
+
+  @keyframes i3 {
+    0% {
+      right: 16%;
+      bottom: 20px;
+    }
+    50% {
+      right: 16%;
+      bottom: 200px;
+    }
+    100% {
+      right: 16%;
+      bottom: 20px;
+    }
+  }
+
+  @media(max-width: 1024px) {
+    @keyframes i3 {
+      0% {
+        right: 70px;
+        bottom: 20px;
+      }
+      50% {
+        right: 70px;
+        bottom: 250px;
+      }
+      100% {
+        right: 70px;
+        bottom: 20px;
+      }
+    }
+  }
+
+  .i3 {
+    width: 200px;
+    animation: i3 12s infinite ease-in-out alternate;
+
+    @media(max-width: 768px) {
+      width: 100px;
+    }
+  }
+
+  &__block {
+    z-index: 1;
+
+    @media(max-width: 768px) {
+      @include flex(center);
+      flex-direction: column;
+    }
+
+    .about__title {
+      font-size: 48px;
+      line-height: 119%;
+      margin-bottom: 18px;
+
+      @media(max-width: 768px) {
+        font-size: 42px;
+      }
+
+      @media(max-width: 510px) {
+        font-size: 36px;
+      }
+    }
+
+    p {
+      max-width: 400px;
+      font-weight: 700;
+      letter-spacing: .5px;
+
+      @media(max-width: 510px) {
+        letter-spacing: 0;
+        font-weight: 400;
+        text-align: center;
+      }
+    }
+
+    &__text-1 {
+      margin-bottom: 20px;
+    }
+
+    &__text-2 {
+      margin-bottom: 60px;
+
+      @media(max-width: 510px) {
+        margin-bottom: 30px;
+      }
+    }
+
+    .about__numbers {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
+      margin-bottom: 45px;
+
+      @media(max-width: 510px) {
+        gap: 30px;
+      }
+
+      &__box {
+        &__text {
+          font-size: 16px;
+        }
+
+        &__num {
+          font-size: 64px;
+          font-weight: 700;
+          line-height: 119%;
+          color: $color-2;
+        }
+      }
+    }
+
+    .about__link {
+      @include flex(center);
+      width: 220px;
+      height: 50px;
+      font-weight: 700;
+      background: linear-gradient(90deg, #f7941d 0%, #27aae1 100%);
+      border-radius: 5px;
+      transition: .2s;
+
+      &:hover {
+        background: linear-gradient(161.43deg, #f7941d 12.21%, #27aae1 87.43%);
+      }
+    }
+
+    iframe {
+      @media(max-width: 768px) {
+        max-width: 100%;
+      }
+    }
+  }
+}

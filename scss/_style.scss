@@ -1,0 +1,49 @@
+$color-text: #000;
+$color-bg: #00093C;
+$color-2: #27AAE1;
+
+@mixin flex($jc) {
+  display: flex; 
+  justify-content: $jc;
+  align-items: center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 500;
+  color: $color-text;  
+}
+
+.body__wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.container {
+  max-width: 1440px;
+  padding: 0 130px;
+  margin: 0 auto;
+
+  @media(max-width: 1340px) {
+    padding: 0 50px;
+  }
+
+  @media(max-width: 768px) {
+    padding: 0 30px;
+  }
+
+  @media(max-width: 510px) {
+    padding: 0 15px;
+  }
+}
+
+fieldset {
+  border: 0;
+}
